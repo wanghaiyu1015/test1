@@ -1,0 +1,13 @@
+version: '2.0'
+
+services:
+  test-project:
+    restart: always
+    image: test-project:1.0
+    container_name: test-project
+    ports:
+      - "8080:8080"
+    networks:
+      - test
+networks:
+  test:

@@ -1,9 +1,15 @@
 stages:
   - deploy
 
-deploy-job:
+deploy:
   tags:
     - runner
   stage: deploy
   script:
-    - echo "hello world"
+    - pwd
+    - mvn clean package
+    - docker-compose down
+    - docker build -t test-project:1.0  .
+    - docker-compose up -d
+
+

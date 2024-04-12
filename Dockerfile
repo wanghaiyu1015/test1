@@ -1,4 +1,4 @@
-FROM kdvolder/jdk8:latest
+FROM docker.io/centos:8
 
 MAINTAINER bxc
 WORKDIR /app
