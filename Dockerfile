@@ -1,8 +1,8 @@
-FROM docker.io/centos:8
+FROM centos:8
 
 MAINTAINER bxc
 WORKDIR /app
-ADD target/test-0.0.1-SNAPSHOT.jar /app/app.jar
+ADD target/test-1.0-SNAPSHOT.jar /app/app.jar
 CMD ["java", "-jar", "app.jar","--spring.profiles.active=pro"]
 
 
